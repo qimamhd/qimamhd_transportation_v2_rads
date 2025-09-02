@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+        <record id="group_allow_credit_inv_priv" model="res.groups">
+			<field name="name">منح صلاحية البيع بالاجل</field>
+		</record>
+        <record id="group_allow_partner_types_priv" model="res.groups">
+			<field name="name">منح صلاحية تصنيف العملاء</field>
+		</record>
+        
+
+    </data>
+</odoo>

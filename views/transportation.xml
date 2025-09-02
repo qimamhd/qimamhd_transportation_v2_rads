@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="transportation_extend_view" model="ir.ui.view">
+            <field name="name">transportation car shape type extend</field>
+            <field name="model">trnsp.transportation.mst</field>
+            <field name="inherit_id" ref="qimamhd_transportation_v2_13.trnsp_transportation_master_view" />
+            <field name="arch" type="xml">
+
+          
+                    <xpath expr="//field[@name='partner_branch_id']" position="after">
+                                <field name="booking_fees"   attrs="{'readonly':['|','|',('sale_invoice_flag','=', True),('pur_invoice_posted_flag','=', True),('state','not in',['draft'])]}"/>
+                         
+                    </xpath>
+                     <xpath expr="//field[@name='transp_charge_type']" position="after">
+                                <field name="storage_fees"  attrs="{'readonly':['|','|',('sale_invoice_flag','=', True),('pur_invoice_posted_flag','=', True),('state','not in',['draft'])]}"/>
+                         
+                    </xpath>
+
+
+            </field>
+        </record>
+
+          <record id="transportation_extend_tree_view" model="ir.ui.view">
+            <field name="name">transportation tree extend</field>
+            <field name="model">trnsp.transportation.mst</field>
+            <field name="inherit_id" ref="qimamhd_transportation_v2_13.trnsp_transportation_mst_tree_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='supplier_id']" position="after">
+                    <field name="booking_fees"   />
+                    <field name="storage_fees"  />
+
+                </xpath>
+                             
+            </field> 
+        </record>
+
+        <record id="transportation_extend_search_view" model="ir.ui.view">
+            <field name="name">البحث في</field>
+            <field name="model">trnsp.transportation.mst</field>
+            <field name="inherit_id" ref="qimamhd_transportation_v2_13.trnsp_transportation_mst_search_view" />
+                <field name="arch" type="xml">
+                    <xpath expr="//search" position="inside">
+                        <field name="booking_fees" />
+                        <field name="storage_fees" />
+
+                    </xpath>
+                    
+                </field>
+         </record>
+    </data>
+
+</odoo>

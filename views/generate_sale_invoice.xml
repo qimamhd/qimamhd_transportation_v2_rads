@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="trnsp_generate_invoice_extend_view">
+            <field name="name">trnsp_generate_invoice_extend_view</field>
+            <field name="model">transp.generate.sale.invoice</field>
+            <field name="inherit_id" ref="qimamhd_transportation_v2_13.trnsp_generate_invoice_bill_view" />
+                <field name="arch" type="xml">
+ 
+                   
+                    <xpath  expr="//field[@name='lines']/tree/field[@name='transp_charge_type']" position="after">
+                        <field name="booking_fees"/>
+                        <field name="storage_fees"/>
+                    </xpath>
+                </field>
+        </record>
+
+        
+    </data>
+</odoo>

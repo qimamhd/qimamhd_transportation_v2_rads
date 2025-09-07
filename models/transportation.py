@@ -9,8 +9,8 @@ class transportation(models.Model):
 
     
     driver_btrip_selection = fields.Selection(
-        [('percentage', 'نسبة'), ('amount', 'مبلغ')], string='Status',
-         copy=False, index=True, tracking=3, default='percentage',required=True)
+        [('percentage', 'نسبة'), ('amount', 'مبلغ')], string='العمولة للسائق',
+         copy=False, index=True, tracking=3, default='amount',required=True)
          
     driver_btrip_amount = fields.Float(string="عمولة السائق")
 

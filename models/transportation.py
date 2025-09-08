@@ -48,7 +48,7 @@ class transportation(models.Model):
 
             if rec.driver_btrip_amount and rec.company_driver_id.employee_account_id and rec.company_id.driver_expense_account_id:
                 description = 'رقم البوليصة: ' + str(rec.invoice_manual) + ' - الوجهة: [من ' +  str(rec.transp_path_from.name) + ' - الى ' + str(rec.transp_path_to.name) + '] ' + ' - تاريخ التحميل : ' + str(rec.load_date) if rec.load_date else ''  + ' - العميل: ' + str(rec.partner_branch_id.name),
-                
+                line_ids = []
                 debit_vals = (0, 0, {
                                 'name':description,
                                 'amount_currency': 0.0,

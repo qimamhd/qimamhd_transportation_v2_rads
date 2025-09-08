@@ -145,4 +145,14 @@ class transportation(models.Model):
                             'invoice_user_id': self.env.uid,
                             'line_ids': line_ids,
                                      }
-                           
+    
+    def call_purchase_invoice(self):
+        for rec in self:
+
+            action = self.env.ref('account.action_move_journal_line')
+            result = action.read()[0]
+            result.pop('id', None)
+            result['context'] = {}
+            result['domain'] = [('purchase_transportation_id', '=', rec.id)]
+           
+            return result

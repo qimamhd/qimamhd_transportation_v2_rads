@@ -376,9 +376,9 @@ right:0px;
                                                     <td>
                                                         <span t-esc="rec.name"/>
                                                     </td>
-                                                      <td>
+                                                    <td>
                                                       <span style="color:gray;" />
-                                                             <span t-esc="'{:,.2f}'.format(l_amount_untaxed)"/>
+                                                         <span t-esc="'{:,.2f}'.format(l_amount_untaxed)"/>
                                                       
                                                     </td>
                                                     <td>

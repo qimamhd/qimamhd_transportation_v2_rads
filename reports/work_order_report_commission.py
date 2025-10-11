@@ -74,8 +74,7 @@ class ReportAttendanceRecap(models.AbstractModel):
 
         domain_compelete = [('order_date', '>=', date_start), ('order_date', '<=', date_end)]
       
-        domain_compelete.append(('checkup_order_id', '!=', False))
-  
+   
 
         if l_company_ids1:
             domain_compelete.append(('company_id', 'in', l_company_ids1))

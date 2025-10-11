@@ -95,7 +95,8 @@ class ReportAttendanceRecap(models.AbstractModel):
             domain_compelete.append(('state', 'in', ['posted','draft','confirmed']))
         if l_company_car_flag:
             if l_driver_id:
-                domain_compelete.append(('company_driver_id', 'in', l_driver_id),('supplier_id.company_car_flag', '=', True))
+                domain_compelete.append(('company_driver_id', 'in', l_driver_id))
+                domain_compelete.append(('supplier_id.company_car_flag', '=', True))
             else:
                 domain_compelete.append(('supplier_id.company_car_flag', '=', True))
  

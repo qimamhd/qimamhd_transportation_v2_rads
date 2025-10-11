@@ -125,18 +125,19 @@
                                                     <th class="text-center" style="width: 5%">سعر البيع</th>
                                                     <th class="text-center" style="width: 6%">سعر الوقفة</th>
                                                     <th class="text-center" style="width: 6%">ايام الوقفة</th>
-                                                    <th class="text-center" style="width: 6%">مسار الشحن</th>
-                                                    <th class="text-center" style="width: 6%">مسار التفريغ</th>
+                                                    <th class="text-center" style="width: 5%">م.الشحن</th>
+                                                    <th class="text-center" style="width: 5%">م.التفريغ</th>
                                                     <th class="text-center" style="width: 7%">عمولة السائق</th>
                                                     <th class="text-center" style="width: 6%">نوع العمولة</th>
                                                     <th class="text-center" style="width: 6%">تاريخ الحمولة</th>
                                                     <th class="text-center" style="width: 6%">رقم البوليصة</th>
                                                     <!-- <th class="text-center" style="width: 10%">المورد</th> -->
                                                     <th class="text-center" style="width: 5%">السيارة</th>
+                                                    <th class="text-center" style="width: 20%">مركز التكلفة</th>
+
                                                     <!-- <th class="text-center" style="width: 6%">هوية السائق</th> -->
                                                     <th class="text-center" style="width: 6%">جوال السائق</th>
                                                      <th class="text-center" style="width: 7%">رقم الفاتورة</th>
-                                                    <th class="text-center" style="width: 20%">مركز التكلفة</th>
 
                                                     
                                                   
@@ -210,6 +211,9 @@
                                                     <td>
                                                         <span style="color:gray;" /> <span t-esc="line.product_car_id.name"/>
                                                     </td>
+                                                      <td>
+                                                      <span style="color:gray;" />  <span t-esc="line.analytic_account_id.name"  />
+                                                    </td>
                                                     <!-- <td>
                                                       <span style="color:gray;" />  <span t-esc="line.driver_identity"  />
                                                     </td> -->
@@ -221,9 +225,7 @@
                                                           <span style="color:gray;" /> <span t-esc="line.sale_invoice_id.name"/> 
                                                     </td>
                                                     
-                                                      <td>
-                                                      <span style="color:gray;" />  <span t-esc="line.analytic_account_id.name"  />
-                                                    </td>
+                                                   
                                                   
                                                     
                                                   </tr>

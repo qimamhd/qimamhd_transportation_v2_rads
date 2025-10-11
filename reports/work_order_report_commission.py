@@ -72,7 +72,7 @@ class ReportAttendanceRecap(models.AbstractModel):
         domain_compelete = []
        
 
-        domain_compelete = [('date', '>=', date_start), ('date', '<=', date_end), ('type', 'in', ['out_invoice','out_refund'])]
+        domain_compelete = [('order_date', '>=', date_start), ('order_date', '<=', date_end)]
       
         domain_compelete.append(('checkup_order_id', '!=', False))
   

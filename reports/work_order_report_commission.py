@@ -13,7 +13,7 @@ class transportaion_driver_report(models.TransientModel):
     report_type = fields.Selection([('detail', 'تفصيلي'),
                                      ('summary', 'إجمالي') 
                                      ], string='نوع التقرير', required=True,
-                                    default='summary')
+                                    default='detail')
     posted_invoices = fields.Boolean(string="الفواتير المرحلة فقط", default=False)
     company_car_flag = fields.Boolean(string="سائقي الشركة فقط", default=True)
  

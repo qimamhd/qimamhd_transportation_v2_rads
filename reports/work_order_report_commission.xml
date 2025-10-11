@@ -91,90 +91,54 @@
 
 			<t t-call ="web.html_container">
 
-				<t t-call="web.external_layout">
-
-<style>
-        table {
-          border-collapse: collapse;
-          width: 100%;
-           font-size:9px;
-        }
-        #t01 th, td {
-          text-align: left;
-          padding: 3px;
-          font-size:9px;
-          vertical-align: middle;
-        }
-</style>
-<style>
-#customers {
-  border-collapse: collapse;
-  width: 100%;
-   border: 1px solid DarkOrange;
-
-  overflow:hidden
-}
-
-#supplier {
-  border-collapse: collapse;
-  width: 100%;
-   border: 1px solid DarkOrange;
-
-  overflow:hidden
-}
-
-#customers td, #customers th {
-  border: 1px solid gray;
-  padding: 5px;
-  text-align: right;
-}
-
-#supplier td, #supplier th {
-  border: 1px solid #D3D3D3;
-  padding: 8px;
-  text-align: right;
-  vertical-align: top;
-}
-
-#customers tr:nth-child(even){background-color: #F5F5F5;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: right;
-
-
-}
-
-#supplier th {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: right;
-
-}
-</style>
-<style>
-#table1 {
-  border-collapse: collapse;
-  width: 100%;
-  font-size:9px;
-}
-
-#table1 th, #table1 td {
-  padding: 8px;
-  text-align: right;
-  font-size:9px;
-}
-</style>
-<style>
-  #foo {
-position:absolute;
-bottom:300px;
-right:0px;
-  }
-</style>
+			 <t t-set="data_report_margin_top" t-value="30"/>
+            <t t-set="data_report_header_spacing" t-value="25"/>
+            <t t-set="data_report_dpi" t-value="120"/>
+            <t t-call="web.external_layout">
+            
+             <style>
+                        
+                        table {
+                          width:100%;
+                          font-size: 14px;
+                        }
+                       #t05 table, th, td {
+                          border: 0px solid black;
+                          border-collapse: collapse;
+                          padding: 5px;
+                          <!--background-color:white;-->
+                          
+                        }
+                        th, td {
+                          padding: 5px;
+                          font-size: 14px;
+                        }
+                        #rcorners1{
+                              border-radius: 5px;
+                              border: 0px solid gray;
+                              padding: 5px; 
+                              width: 200px;
+                              text-align:center;
+                               margin: auto; 
+                            }
+                         #rcorners2{
+                          border-radius: 5px;
+                          border: 1px solid gray;
+                          padding: 5px; 
+                           margin: auto; 
+                        }
+                        #t01 th {
+                            background-color: LightGray;
+                            
+                        }
+             #rcorners3{
+              border-radius: 5px;
+              border: 1px solid gray;
+              padding: 5px; 
+            }
+            div { margin: auto; }
+        </style>
+        
 
 						<div class="page">
               <br /> <br />

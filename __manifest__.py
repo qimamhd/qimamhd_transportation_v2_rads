@@ -25,6 +25,7 @@
         'views/transportation.xml',
         'views/generate_sale_invoice.xml',
         'reports/report_view.xml',
+        'reports/work_order_report_commission.xml',
         
        
 	#'wizards/recap.xml',

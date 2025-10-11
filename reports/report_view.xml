@@ -26,7 +26,7 @@
                           
                              <field name="company_car_flag"  readonly="1"  />
 
-                             <field name="posted_invoices"  readonly="1"  />
+                             <field name="posted_invoices"     />
                              <field name="report_type"   widget="radio" />
                         </group>
                       

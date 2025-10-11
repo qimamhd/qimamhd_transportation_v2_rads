@@ -352,7 +352,7 @@ right:0px;
                                         </thead>
                                         <tbody>
                                         <t t-set="l_cnt" t-value="0"/>
-                                               <t t-foreach="sale_mans" t-as="rec">
+                                            <t t-foreach="sale_mans" t-as="rec">
                                                 <tr>
                                                    
 

@@ -96,10 +96,7 @@ class ReportAttendanceRecap(models.AbstractModel):
         if l_company_car_flag:
             if l_driver_id:
                 domain_compelete.append(('company_driver_id', 'in', l_driver_id))
-                domain_compelete.append(('supplier_id.company_car_flag', '=', True))
-            else:
-                domain_compelete.append(('supplier_id.company_car_flag', '=', True))
- 
+              
         
         print(domain_compelete)
         request_compelete = self.env['trnsp.transportation.mst'].search(domain_compelete)

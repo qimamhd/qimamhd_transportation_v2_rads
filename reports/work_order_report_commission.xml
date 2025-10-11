@@ -133,10 +133,10 @@
                                                     <th class="text-center" style="width: 6%">رقم البوليصة</th>
                                                     <!-- <th class="text-center" style="width: 10%">المورد</th> -->
                                                     <th class="text-center" style="width: 5%">السيارة</th>
-                                                    <th class="text-center" style="width: 6%">هوية السائق</th>
+                                                    <!-- <th class="text-center" style="width: 6%">هوية السائق</th> -->
                                                     <th class="text-center" style="width: 6%">جوال السائق</th>
                                                      <th class="text-center" style="width: 7%">رقم الفاتورة</th>
-                                                    <th class="text-center" style="width: 5%">مركز التكلفة</th>
+                                                    <th class="text-center" style="width: 20%">مركز التكلفة</th>
 
                                                     
                                                   
@@ -210,9 +210,9 @@
                                                     <td>
                                                         <span style="color:gray;" /> <span t-esc="line.product_car_id.name"/>
                                                     </td>
-                                                    <td>
+                                                    <!-- <td>
                                                       <span style="color:gray;" />  <span t-esc="line.driver_identity"  />
-                                                    </td>
+                                                    </td> -->
                                                      <td>
                                                       <span style="color:gray;" />  <span t-esc="line.mobile_no"  />
                                                     </td>

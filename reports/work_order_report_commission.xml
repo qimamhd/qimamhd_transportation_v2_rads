@@ -6,8 +6,8 @@
 				model="tranp.driver.report"
 				string="حركه السائقين"
 				report_type="qweb-pdf"
-				name="qimamhd_car_checkup_13.transp_driver_report_view"
-				file="qimamhd_car_checkup_13.transp_driver_report_view"
+				name="qimamhd_transportation_v2_rads.transp_driver_report_view"
+				file="qimamhd_transportation_v2_rads.transp_driver_report_view"
 				 menu="True"
 
 				/>
@@ -16,7 +16,7 @@
         model="tranp.driver.report"
         string="Print to XLSX"
         report_type="xlsx"
-        name="qimamhd_car_checkup_13.mntns_commission_report_xlsx_view"
+        name="qimamhd_transportation_v2_rads.mntns_commission_report_xlsx_view"
         file="حركه السائقين"
         attachment_use="False"
         />

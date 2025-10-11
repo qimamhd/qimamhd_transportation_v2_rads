@@ -58,6 +58,6 @@
       <menuitem action="action_tranp_driver_report"
           id="menu_tranp_driver_report"
            sequence="20"
-           parent="qimamhd_transportation_v2_rads.transportation_report_menu"/>
+           parent="qimamhd_transportation_v2_13.transportation_report_menu"/>
  
 </odoo>

@@ -10,8 +10,7 @@ class transportaion_driver_report(models.TransientModel):
     date_start = fields.Date(required=True, default=fields.Date.today)
     date_end = fields.Date(required=True, default=fields.Date.today)
     partner_branch_id = fields.Many2many('res.partner.branches', string=" العميل", )
-    report_type = fields.Selection([('detail', 'تفصيلي'),
-                                    #  ('summary', 'إجمالي') 
+    report_type = fields.Selection([('detail', 'تفصيلي')  
                                      ], string='نوع التقرير', required=True,
                                     default='detail')
     posted_invoices = fields.Boolean(string="الفواتير المرحلة فقط", default=False)

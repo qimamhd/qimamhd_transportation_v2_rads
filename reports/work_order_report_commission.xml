@@ -118,11 +118,11 @@
                                             <table  id="customers">
                                               <thead>
                                                 <tr class="text-center">
-                                                    <th class="text-center" style="width: 5%">#</th>
-                                                    <th class="text-center" style="width: 5%">رقم الشحنة</th>
-                                                    <th class="text-center" style="width: 10%">تاريخ الطلب</th>
-                                                    <th class="text-center" style="width: 10%">العميل</th>
-                                                    <th class="text-center" style="width: 10%">سعر البيع</th>
+                                                    <th class="text-center" style="width: 3%">#</th>
+                                                    <th class="text-center" style="width: 6%">رقم الشحنة</th>
+                                                    <th class="text-center" style="width: 7%">تاريخ الطلب</th>
+                                                    <th class="text-center" style="width: 15%">العميل</th>
+                                                    <th class="text-center" style="width: 7%">سعر البيع</th>
                                                     <th class="text-center" style="width: 10%">سعر الوقفة</th>
                                                     <th class="text-center" style="width: 10%">ايام الوقفة</th>
                                                     <th class="text-center" style="width: 7%">مسار الشحن</th>

@@ -24,6 +24,8 @@
         # 'security/security.xml',
         'views/transportation.xml',
         'views/generate_sale_invoice.xml',
+        'reports/report_view.xml',
+        
        
 	#'wizards/recap.xml',
     ],

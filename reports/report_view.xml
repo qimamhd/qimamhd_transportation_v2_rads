@@ -1,0 +1,63 @@
+<odoo>    
+    
+
+          
+    <record model="ir.ui.view" id="tranp_driver_report_wizred">
+        <field name="name">tranp_driver_report_wizred</field>
+        <field name="model">tranp.driver.report</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="custom Report">
+                    <group>
+                        <group>
+                            <field name="date_start"  />
+                        </group>
+                        <group>
+                            <field name="date_end"  />
+                        </group>
+                         
+                        <group>
+                               <field name="partner_branch_id" widget="many2many_tags"  string=" العميل" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,'no_create': True}" />
+                                <field name="driver_id" widget="many2many_tags"  options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,'no_create': True}" />
+
+                        </group>
+
+                        <group>
+                          
+                             <field name="company_car_flag"  readonly="1"  />
+
+                             <field name="posted_invoices"  readonly="1"  />
+                             <field name="report_type"   widget="radio" />
+                        </group>
+                      
+                    </group>
+                <group>
+
+
+                     <group>
+                         <field name="branch_id"  widget="many2many_tags"   options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,'no_create': True}"/>
+                          <field name="company_ids1" groups="base.group_multi_company" string="الشركة"  options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,'no_create': True}" />
+                    </group>
+                </group>
+
+                <footer>
+                    <button name="get_report" string="Print Report" type="object" class="oe_highlight"/>
+                    <button name="get_report_excel" string="Print to Xlsx" type="object" />
+
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+      <act_window id="action_tranp_driver_report"
+            name="تقرير حركة السائقين"
+            res_model="tranp.driver.report"
+            view_mode="form"
+            target="new"/>
+
+      <menuitem action="action_tranp_driver_report"
+          id="menu_tranp_driver_report"
+           sequence="20"
+           parent="qimamhd_transportation_v2_rads.transportation_report_menu"/>
+ 
+</odoo>

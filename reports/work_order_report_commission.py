@@ -90,7 +90,8 @@ class ReportAttendanceRecap(models.AbstractModel):
              
  
         if l_posted_invoices:
-            domain_compelete.append(('sale_invoice_id', '!=',False),('state', 'in', ['confirmed','posted','draft']))
+            domain_compelete.append(('sale_invoice_id', '!=',False))
+            domain_compelete.append(('state', 'in', ['confirmed','posted','draft']))
         else:
             domain_compelete.append(('state', 'in', ['posted','draft','confirmed']))
         if l_company_car_flag:

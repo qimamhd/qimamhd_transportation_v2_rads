@@ -105,7 +105,7 @@ class ReportAttendanceRecap(models.AbstractModel):
 
             l_companys = self.env['res.company'].search([('id', 'in', l_company_ids1)])
             l_branchs = self.env['custom.branches'].search([('id', 'in', l_branch_id)])
-            l_partner = self.env['res.partner.branch'].search([('id', 'in', request_compelete.partner_branch_id.ids)])
+            l_partner = self.env['res.partner.branches'].search([('id', 'in', request_compelete.partner_branch_id.ids)])
             l_company_car_driver = self.env['hr.employee'].search([('id', 'in',request_compelete.company_driver_id.ids)])
  
             return {

@@ -130,7 +130,7 @@
                                                     <th class="text-center" style="width: 7%">عمولة السائق</th>
                                                     <th class="text-center" style="width: 7%">نوع العمولة</th>
                                                     <th class="text-center" style="width: 7%">تاريخ الحمولة</th>
-                                                    <th class="text-center" style="width: 7%">رقم البوليصة</th>
+                                                    <th class="text-center" style="width: 15%">رقم البوليصة</th>
                                                     <!-- <th class="text-center" style="width: 10%">المورد</th> -->
                                                     <th class="text-center" style="width: 5%">السيارة</th>
                                                     <th class="text-center" style="width: 10%">هوية السائق</th>

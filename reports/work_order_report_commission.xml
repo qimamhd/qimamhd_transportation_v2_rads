@@ -120,23 +120,23 @@
                                                 <tr class="text-center">
                                                     <th class="text-center" style="width: 3%">#</th>
                                                     <th class="text-center" style="width: 6%">رقم الشحنة</th>
-                                                    <th class="text-center" style="width: 7%">تاريخ الطلب</th>
+                                                    <th class="text-center" style="width: 6%">تاريخ الطلب</th>
                                                     <th class="text-center" style="width: 15%">العميل</th>
-                                                    <th class="text-center" style="width: 6%">سعر البيع</th>
-                                                    <th class="text-center" style="width: 6%">سعر الوقفة</th>
-                                                    <th class="text-center" style="width: 6%">ايام الوقفة</th>
-                                                    <th class="text-center" style="width: 7%">مسار الشحن</th>
-                                                    <th class="text-center" style="width: 7%">مسار التفريغ</th>
-                                                    <th class="text-center" style="width: 7%">عمولة السائق</th>
-                                                    <th class="text-center" style="width: 7%">نوع العمولة</th>
-                                                    <th class="text-center" style="width: 7%">تاريخ الحمولة</th>
+                                                    <th class="text-center" style="width: 5%">سعر البيع</th>
+                                                    <th class="text-center" style="width: 5%">سعر الوقفة</th>
+                                                    <th class="text-center" style="width: 5%">ايام الوقفة</th>
+                                                    <th class="text-center" style="width: 6%">مسار الشحن</th>
+                                                    <th class="text-center" style="width: 6%">مسار التفريغ</th>
+                                                    <th class="text-center" style="width: 6%">عمولة السائق</th>
+                                                    <th class="text-center" style="width: 6%">نوع العمولة</th>
+                                                    <th class="text-center" style="width: 6%">تاريخ الحمولة</th>
                                                     <th class="text-center" style="width: 15%">رقم البوليصة</th>
                                                     <!-- <th class="text-center" style="width: 10%">المورد</th> -->
                                                     <th class="text-center" style="width: 5%">السيارة</th>
-                                                    <th class="text-center" style="width: 10%">هوية السائق</th>
-                                                    <th class="text-center" style="width: 10%">جوال السائق</th>
+                                                    <th class="text-center" style="width: 6%">هوية السائق</th>
+                                                    <th class="text-center" style="width: 6%">جوال السائق</th>
                                                      <th class="text-center" style="width: 7%">رقم الفاتورة</th>
-                                                    <th class="text-center" style="width: 7%">مركز التكلفة</th>
+                                                    <th class="text-center" style="width: 15%">مركز التكلفة</th>
 
                                                     
                                                   

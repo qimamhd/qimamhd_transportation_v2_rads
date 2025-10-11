@@ -276,7 +276,7 @@ right:0px;
                                                         <span style="color:gray;" /> <span t-esc="line.product_car_id.name"/>
                                                     </td>
                                                     <td>
-                                                      <span style="color:gray;" />  <span t-esc="line.driver_indentity"  />
+                                                      <span style="color:gray;" />  <span t-esc="line.driver_identity"  />
                                                     </td>
                                                      <td>
                                                       <span style="color:gray;" />  <span t-esc="line.mobile_no"  />

@@ -54,6 +54,13 @@
                     <xpath expr="//search" position="inside">
                         <field name="booking_fees" />
                         <field name="storage_fees" />
+                        <group expand='0' string='Filters'>
+                             <filter string="الشحنات الغير مفوتره" name="un_invoiced_works" domain="[('sale_invoice_id', '=', False)]"/>
+
+                           
+                      </group>
+
+
 
                     </xpath>
                     

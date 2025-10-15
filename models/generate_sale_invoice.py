@@ -59,6 +59,8 @@ class xx_generate_sale_mst(models.Model):
                         'header_id': rec.id,
                         'booking_fees': line.booking_fees,
                         'storage_fees': line.storage_fees,
+                         'analytic_account_id': line.analytic_account_id.id,
+
                         
                         })
 

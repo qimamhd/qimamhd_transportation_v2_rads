@@ -16,7 +16,8 @@ class transportaion_driver_report(models.TransientModel):
                                     default='detail')
     posted_invoices = fields.Boolean(string="الفواتير المرحلة فقط", default=False)
     company_car_flag = fields.Boolean(string="سائقي الشركة فقط", default=True)
- 
+    hide_price = fields.Boolean(string="اخفاء الاسعار", default=False)
+    transp_path_to = fields.Many2one('trnsp.transportation.path', string="مسار التفريغ", required=True)
     company_ids1 = fields.Many2many(comodel_name="res.company", string="الشركة", required=True,
                                     default=lambda self: self.env.user.company_ids.ids)
     branch_id = fields.Many2many('custom.branches', string="الفرع", required=True, default=lambda self: self.env.user.allowed_branch_ids.ids)
@@ -42,9 +43,11 @@ class transportaion_driver_report(models.TransientModel):
                 'company_ids1': [(i['id']) for i in self.company_ids1],
                 'branch_id': [(i['id']) for i in self.branch_id],
                 'driver_id': [(i['id']) for i in self.driver_id],
+                'transp_path_to': [(i['id']) for i in self.transp_path_to],
                 'posted_invoices': self.posted_invoices,
                 'report_type': self.report_type,
                 'company_car_flag': self.company_car_flag,
+                'hide_price': self.hide_price,
 
 
             },
@@ -68,13 +71,17 @@ class ReportAttendanceRecap(models.AbstractModel):
         l_posted_invoices = data['form']['posted_invoices']
         l_report_type = data['form']['report_type']
         l_company_car_flag = data['form']['company_car_flag']
+        l_hide_price = data['form']['hide_price']
+        l_transp_path_to = data['form']['transp_path_to']
      
         domain_compelete = []
        
 
         domain_compelete = [('order_date', '>=', date_start), ('order_date', '<=', date_end)]
       
-   
+        if l_transp_path_to:
+            domain_compelete.append(('transp_path_to', 'in', l_transp_path_to))
+
 
         if l_company_ids1:
             domain_compelete.append(('company_id', 'in', l_company_ids1))
@@ -119,6 +126,7 @@ class ReportAttendanceRecap(models.AbstractModel):
                 'company_car_driver': l_company_car_driver,
                  'report_type': l_report_type,
                 'docs_compelete': request_compelete,
+                'hide_price':l_hide_price,
             }
         else:
             raise ValidationError(

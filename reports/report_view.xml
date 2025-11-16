@@ -19,6 +19,7 @@
                         <group>
                                <field name="partner_branch_id" widget="many2many_tags"  string=" العميل" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,'no_create': True}" />
                                 <field name="driver_id" widget="many2many_tags"  options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,'no_create': True}" />
+                                <field name="transp_path_to" widget="many2many_tags"  options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,'no_create': True}" />
 
                         </group>
 
@@ -27,6 +28,7 @@
                              <field name="company_car_flag"  readonly="1"  />
 
                              <field name="posted_invoices"     />
+                             <field name="hide_price"     />
                              <!-- <field name="report_type"   widget="radio" /> -->
                         </group>
                       

@@ -122,8 +122,12 @@
                                                     <th class="text-center" style="width: 6%">رقم الشحنة</th>
                                                     <th class="text-center" style="width: 7%">تاريخ الطلب</th>
                                                     <th class="text-center" style="width: 10%">العميل</th>
-                                                    <th class="text-center" style="width: 5%">سعر البيع</th>
-                                                    <th class="text-center" style="width: 6%">سعر الوقفة</th>
+                                                     <t t-if="not hide_price">
+                                                         <th class="text-center" style="width: 5%">سعر البيع</th>
+                                                         <th class="text-center" style="width: 6%">سعر الوقفة</th>
+
+                                                     </t>
+                                                   
                                                     <th class="text-center" style="width: 6%">ايام الوقفة</th>
                                                     <th class="text-center" style="width: 5%">م.الشحن</th>
                                                     <th class="text-center" style="width: 5%">م.التفريغ</th>
@@ -175,16 +179,18 @@
                                                     <td>
                                                           <span style="color:gray;" /> <span t-esc="line.partner_branch_id.name"/> 
                                                     </td> 
+                                                     <t t-if="not hide_price">
 
-                                                      <td>
-                                                          <span style="color:gray;" /> <span t-esc="line.customer_price"/> 
-                                                    </td>     
-                                                      <td>
-                                                          <span style="color:gray;" /> <span t-esc="line.customer_stop"/> 
-                                                    </td>     
+                                                          <td>
+                                                              <span style="color:gray;" /> <span t-esc="line.customer_price"/> 
+                                                        </td>     
+                                                          <td>
+                                                              <span style="color:gray;" /> <span t-esc="line.customer_stop"/> 
+                                                          </td>   
+                                                      </t>  
                                                       <td>
                                                           <span style="color:gray;" /> <span t-esc="line.stopped_days"/> 
-                                                    </td>     
+                                                      </td>     
 
                                                     <td>
                                                       <span style="color:gray;" />  <span t-esc="line.transp_path_from.name"  />
@@ -234,25 +240,43 @@
                                               </tbody>
 
                                               <tr style="background-color:gray;color:white;"  class="text-center">
+                                                <t t-if="not hide_price">
                                                   <td  colspan="9">
-                                                      <strong> 
-                                                      الاجمالي  
-                                                    </strong>
-                                                </td>
- 
-                                                <td>
-                                                    <strong>
-          
-                                                      <span t-esc=" '{:,.2f}'.format(l_commission_total )" /></strong>
+                                                        <strong> 
+                                                        الاجمالي  
+                                                      </strong>
+                                                  </td>
+  
+                                                  <td>
+                                                      <strong>
+            
+                                                        <span t-esc=" '{:,.2f}'.format(l_commission_total )" /></strong>
 
 
-                                                </td>
+                                                  </td>
+                                                </t>
+                                                 <t t-if="hide_price">
+                                                  <td  colspan="7">
+                                                        <strong> 
+                                                        الاجمالي  
+                                                      </strong>
+                                                  </td>
+  
+                                                  <td>
+                                                      <strong>
+            
+                                                        <span t-esc=" '{:,.2f}'.format(l_commission_total )" /></strong>
+
+
+                                                  </td>
+                                                </t>
                                                 
                                               </tr>
                                           </table>
                                         </t>  
                                       <table  id="customers">
                                       <tr style="background-color:gray;color:white;"  class="text-center">
+                                       <t t-if="not hide_price">
                                           <td  colspan="13">
                                               <strong> اجمالي عمولات السائقين</strong>
 
@@ -265,6 +289,21 @@
 
 
                                           </td>
+                                        </t>
+                                         <t t-if="hide_price">
+                                          <td  colspan="11">
+                                              <strong> اجمالي عمولات السائقين</strong>
+
+                                          </td>
+ 
+                                            <td style="color:white;">
+                                              <strong>
+    
+                                                <span t-esc="'{:,.2f}'.format(l_commisiion_total_all)" /></strong>
+
+
+                                          </td>
+                                        </t>
 
                                         </tr>
 

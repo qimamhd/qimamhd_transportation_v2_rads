@@ -17,7 +17,7 @@ class transportaion_driver_report(models.TransientModel):
     posted_invoices = fields.Boolean(string="الفواتير المرحلة فقط", default=False)
     company_car_flag = fields.Boolean(string="سائقي الشركة فقط", default=True)
     hide_price = fields.Boolean(string="اخفاء الاسعار", default=False)
-    transp_path_to = fields.Many2one('trnsp.transportation.path', string="مسار التفريغ",)
+    transp_path_to = fields.Many2many('trnsp.transportation.path', string="مسار التفريغ",)
     company_ids1 = fields.Many2many(comodel_name="res.company", string="الشركة", required=True,
                                     default=lambda self: self.env.user.company_ids.ids)
     branch_id = fields.Many2many('custom.branches', string="الفرع", required=True, default=lambda self: self.env.user.allowed_branch_ids.ids)
